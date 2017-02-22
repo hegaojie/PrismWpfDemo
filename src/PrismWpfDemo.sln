@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWpfDemo.Client", "PrismWpfDemo.Client\PrismWpfDemo.Client.csproj", "{2ECAE99F-0F77-4BF0-9090-E69E4DB05B51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{87A5F97A-340E-4D00-B04E-AEF13FD1E98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrismWpfDemo.Movie", "Modules\PrismWpfDemo.Movie\PrismWpfDemo.Movie.csproj", "{8239316E-14F0-422A-95F5-96E357B68D00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2ECAE99F-0F77-4BF0-9090-E69E4DB05B51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ECAE99F-0F77-4BF0-9090-E69E4DB05B51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ECAE99F-0F77-4BF0-9090-E69E4DB05B51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ECAE99F-0F77-4BF0-9090-E69E4DB05B51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8239316E-14F0-422A-95F5-96E357B68D00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8239316E-14F0-422A-95F5-96E357B68D00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8239316E-14F0-422A-95F5-96E357B68D00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8239316E-14F0-422A-95F5-96E357B68D00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{8239316E-14F0-422A-95F5-96E357B68D00} = {87A5F97A-340E-4D00-B04E-AEF13FD1E98E}
+	EndGlobalSection
+EndGlobal
