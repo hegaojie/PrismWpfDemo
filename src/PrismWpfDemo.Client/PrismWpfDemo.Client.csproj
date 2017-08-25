@@ -88,7 +88,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApplicationBootstrapper.cs" />
+    <Compile Include="Bootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -126,6 +126,14 @@
     <ProjectReference Include="..\Modules\PrismWpfDemo.Movie\PrismWpfDemo.Movie.csproj">
       <Project>{8239316e-14f0-422a-95f5-96e357b68d00}</Project>
       <Name>PrismWpfDemo.Movie</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modules\PrismWpfDemo.Services\PrismWpfDemo.Services.csproj">
+      <Project>{a316a95f-1768-425a-9602-d150803f58eb}</Project>
+      <Name>PrismWpfDemo.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PrismWpfDemo.Infrastructures\PrismWpfDemo.Infrastructures.csproj">
+      <Project>{e79f045c-d18a-48c8-9159-98dfbb6dc2e0}</Project>
+      <Name>PrismWpfDemo.Infrastructures</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

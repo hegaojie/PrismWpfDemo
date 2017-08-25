@@ -5,10 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrismWpfDemo.Client"
         xmlns:prism="http://prismlibrary.com/"
-        mc:Ignorable="d"
-        Title="Prism WPF Demo" Height="300" Width="300">
+        xmlns:mvvm="clr-namespace:PrismWpfDemo.Infrastructures.Mvvm;assembly=PrismWpfDemo.Infrastructures"
+        Title="Prism WPF Demo">
+    <Window.Resources>
+        <Style x:Key="TabHeaderStyle" TargetType="TabItem">
+            <Setter Property="HeaderTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding DataContext.ViewName}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
     <DockPanel LastChildFill="True">
-        <ContentControl prism:RegionManager.RegionName="ToolbarRegion" DockPanel.Dock="Top"></ContentControl>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion"></ContentControl>
+        <StackPanel Orientation="Horizontal" prism:RegionManager.RegionName="{x:Static mvvm:RegionTags.ToolbarRegion}" DockPanel.Dock="Top"></StackPanel>
+        <ContentControl prism:RegionManager.RegionName="{x:Static mvvm:RegionTags.SidebarRegion}" DockPanel.Dock="Left"></ContentControl>
+        <ContentControl prism:RegionManager.RegionName="{x:Static mvvm:RegionTags.StatusbarRegion}" DockPanel.Dock="Bottom"></ContentControl>
+        <TabControl prism:RegionManager.RegionName="{x:Static mvvm:RegionTags.ContentRegion}" >
+            <TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="Header" Value="{Binding DataContext.ViewName}"></Setter>
+                </Style>
+            </TabControl.ItemContainerStyle>            
+            <!--<TabControl.ItemContainerStyle>
+                <Style TargetType="TabItem">
+                    <Setter Property="HeaderTemplate">
+                        <Setter.Value>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding DataContext.ViewName}"></TextBlock>
+                                    <Button Content="X" Command="{Binding }"></Button>
+                                </StackPanel>
+                            </DataTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.ItemContainerStyle>-->
+            
+        </TabControl>
     </DockPanel>
 </Window>

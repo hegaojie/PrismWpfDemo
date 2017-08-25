@@ -17,7 +17,7 @@ namespace PrismWpfDemo.Client
         {
             base.OnStartup(e);
 
-            var bootstrapper = new ApplicationBootstrapper();
+            var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
         }
     }
